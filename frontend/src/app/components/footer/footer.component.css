@@ -1,0 +1,21 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column; /* Stack header, content, and footer vertically */
+    min-height: 100vh; /* Ensure the body takes at least full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Content Styles */
+.content {
+    flex: 1; /* Allow content to grow and fill available space */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2C3930; /* Dark background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 15px; /* Padding for the footer */
+    width: 100%; /* Full width */
+}

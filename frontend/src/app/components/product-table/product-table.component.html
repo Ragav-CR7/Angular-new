@@ -1,0 +1,42 @@
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{ product.prodId}}</td>
+        <td>
+            <input *ngIf="product.editing" [(ngModel)]="product.prodName" />
+            <span *ngIf="!product.editing">{{ product.prodName }}</span>
+        </td>
+        <td>
+            <input *ngIf="product.editing" [(ngModel)]="product.price" />
+            <span *ngIf="!product.editing">{{ product.price }}</span>
+        </td>
+        <td>
+            <input *ngIf="product.editing" [(ngModel)]="product.category" />
+            <span *ngIf="!product.editing">{{ product.category }}</span>
+        </td>
+        <td>
+            <button *ngIf="!product.editing" (click)="editProduct(product)">Edit</button>
+            <button *ngIf="product.editing" (click)="saveUpdate(product)">Save</button>
+            <button *ngIf="product.editing" (click)="product.editing = false">Cancel</button>
+            <button (click)="deleteProduct(product._id)">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<button (click)="showForm = !showForm">+</button>
+
+<div *ngIf="showForm">
+    <h3>Add New Product</h3>
+    <input [(ngModel)]="newProduct.prodId" placeholder="Product ID" required />
+    <input [(ngModel)]="newProduct.prodName" placeholder="Product Name" required />
+    <input [(ngModel)]="newProduct.price" placeholder="Price" type="number" required />
+    <input [(ngModel)]="newProduct.category" placeholder="Category" required />
+    <button (click)="addProduct()">Add Product</button>
+    <button (click)="showForm = false">Cancel</button>
+</div>

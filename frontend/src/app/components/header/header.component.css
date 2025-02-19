@@ -1,0 +1,52 @@
+/* Navbar Container */
+.navbar {
+    width: 95%;
+    background-color: #2C3930;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar (Flex Layout) */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Title Left, Links Right */
+}
+
+/* Product Management Title (Left) */
+.logo {
+    font-size: 28px;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Navigation Links (Right) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Link Styling */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+    padding:1em;
+    background: white;
+    text-decoration: none;
+    color: #ffffff; /* Golden Yellow on Hover */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
