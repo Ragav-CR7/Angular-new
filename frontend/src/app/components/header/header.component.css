@@ -1,19 +1,17 @@
-/* Navbar Container */
+
 .navbar {
-    width: 95%;
+    width: 98%;
     background-color: #2C3930;
     padding: 15px 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Bar (Flex Layout) */
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Title Left, Links Right */
+    justify-content: space-between; 
 }
 
-/* Product Management Title (Left) */
 .logo {
     font-size: 28px;
     color: white;
@@ -22,16 +20,15 @@ nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Navigation Links (Right) */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Spacing between links */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 30px; 
     margin: 0;
     padding: 0;
 }
 
-/* Navigation Link Styling */
 .nav-links li a {
     text-decoration: none;
     color: white;
@@ -40,12 +37,11 @@ nav {
     transition: color 0.3s ease;
 }
 
-/* Hover Effect */
 .nav-links li a:hover {
     padding:1em;
     background: white;
     text-decoration: none;
-    color: #ffffff; /* Golden Yellow on Hover */
+    color: #2C3930;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
